@@ -102,6 +102,15 @@ public class StringList {
 			return s;
 		}));
 		System.out.println(collect);
+		
+		String s1 = "I Love My   India";
+		String []sArray = s1.split(" ");
+		String rev = "";
+		for (int i=sArray.length-1; i>=0; i--) {
+			if(!sArray[i].equals(""))
+				rev = rev + sArray[i].trim() + " ";
+		}
+		System.out.println(rev);
 
 	}
 }

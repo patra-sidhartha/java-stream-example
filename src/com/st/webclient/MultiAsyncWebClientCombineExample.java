@@ -4,6 +4,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class MultiAsyncWebClientCombineExample {
 	public static void main(String[] args) {
+		/*
 		WebClient webClient = WebClient.builder()
 				.baseUrl("http://localhost:8080").build();
 
@@ -24,5 +25,6 @@ public class MultiAsyncWebClientCombineExample {
 		});
 
 		combinedFuture.join();
+		*/
 	}
 }

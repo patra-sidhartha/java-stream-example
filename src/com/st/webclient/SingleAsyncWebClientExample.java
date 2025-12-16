@@ -4,6 +4,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class SingleAsyncWebClientExample {
 	public static void main(String[] args) {
+		/*
 		WebClient webClient = WebClient.builder()
 				.baseUrl("http://localhost:8080")
 				.build();
@@ -21,5 +22,6 @@ public class SingleAsyncWebClientExample {
 
 		// Block to ensure the main thread waits for the async operation
 		futureResult.join();
+		*/
 	}
 }

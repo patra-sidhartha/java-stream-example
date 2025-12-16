@@ -99,6 +99,13 @@ public class EmployeeList {
 		));
 		System.out.println(collect1);
 
+
+		 // 3. Sort using Java streams and comparators
+        // List<Product> sortedProducts = products.stream()
+        //     .sorted(Comparator.comparing(Product::getName) // Sort primarily by name
+        //               .thenComparing(Product::getCategory)) // Sort secondarily by category
+        //     .collect(Collectors.toList());
+
 	}
 
 }

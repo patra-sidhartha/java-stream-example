@@ -4,6 +4,9 @@ public class MaxSubArrayWithSum {
 
 	public static void main(String[] args) {
 		// Find the maximum subarray sum(Kadane's Algorithm)
+		// Input: arr[] = [2, 3, -8, 7, -1, 2, 3] Output: 11
+		// Explanation: The subarray [7, -1, 2, 3] has the largest sum 11.
+		int arr[] = new int[] {2, 3, -8, 7, -1, 2, 3};
 		maxSubArraySum(arr);
 	}
 

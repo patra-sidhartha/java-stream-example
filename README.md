@@ -1,53 +1,48 @@
 # java-stream-example
 
-Java Stream
-Grouping By
-1. Basic Single-Field Grouping
-	Group by Department:
-	Group by Salary:
-2. Grouping with Aggregations (Summary Statistics)
-	Count Employees per Department
-	Average Salary per Department:
-	Total Salary (Sum) per Department:
-	Max/Min Salary Earner per Department:
- 3. Multi-Level Grouping
-	Group by Department, then by Salary:
-	By Department, Salary, and then Employee Number:
-4. Grouping with Mapping (Extracting Specific Fields)
-	Sometimes you only need a specific field (like names) from the grouped objects rather than the whole Employee object.
-	Employee Names by Department:
-5. Sort After Goup
-	Group By Dept SortEmpNo
-	Sorted by Department Name:
-6. Partitioning (Special Binary Grouping)
-	High vs. Low Salary Partitioning: (e.g., threshold of 50,000)
-	In Partitioning can we sort the element 
 
-ToMap
+Grouping By <br>
+1. Basic Single-Field Grouping <br>
+	Group by Department:<br>
+	Group by Salary:<br>
+2. Grouping with Aggregations (Summary Statistics)<br>
+	Count Employees per Department<br>
+	Average Salary per Department:<br>
+	Total Salary (Sum) per Department:<br>
+	Max/Min Salary Earner per Department:<br>
+ 3. Multi-Level Grouping<br>
+	Group by Department, then by Salary:<br>
+	By Department, Salary, and then Employee Number:<br>
+4. Grouping with Mapping (Extracting Specific Fields)<br>
+	Sometimes you only need a specific field (like names) from the grouped objects rather than the whole Employee object.<br>
+	Employee Names by Department:<br>
+5. Sort After Goup<br>
+	Group By Dept SortEmpNo<br>
+	Sorted by Department Name:<br>
+6. Partitioning (Special Binary Grouping)<br>
+	High vs. Low Salary Partitioning: (e.g., threshold of 50,000)<br>
+	In Partitioning can we sort the element <br>
+
+ToMap<br>
 ———
-1. Basic 1:1 Mapping
-Used when you have unique keys (like empno). If a duplicate key is encountered, it throws an IllegalStateException.
-	Map EmpNo to Employee Object
-	Map EmpNo to Employee Name:
+1. Basic 1:1 Mapping<br>
+Used when you have unique keys (like empno). If a duplicate key is encountered, it throws an IllegalStateException.<br>
+	Map EmpNo to Employee Object<br>
+	Map EmpNo to Employee Name:<br>
 
-2. Handling Duplicate Keys (Merge Function)
-If your list might have duplicate keys (e.g., mapping by dept), you must provide a Merge Function to decide which value to keep.
- 	Keep the first employee found:
-	Keep the employee with the highest salary:
+2. Handling Duplicate Keys (Merge Function)<br>
+If your list might have duplicate keys (e.g., mapping by dept), you must provide a Merge Function to decide which value to keep.<br>
+ 	Keep the first employee found:<br>
+	Keep the employee with the highest salary:<br>
 
-3. Specific Map Implementation (Supplier)
-By default, toMap returns a HashMap. You can specify a different type like TreeMap or LinkedHashMap using a Map Supplier.
-	Collect into a LinkedHashMap (Preserves insertion order):
+3. Specific Map Implementation (Supplier)<br>
+By default, toMap returns a HashMap. You can specify a different type like TreeMap or LinkedHashMap using a Map Supplier.<br>
+	Collect into a LinkedHashMap (Preserves insertion order):<br>
 
- 4. Sort the Map based on Key or Value
-	Sort the Map based on key
-	Sort the Map based on key DESC
-	Sort Based on Emp No of emp
-	Sort Based on Emp No of emp DESC
+ 4. Sort the Map based on Key or Value<br>
+	Sort the Map based on key<br>
+	Sort the Map based on key DESC<br>
+	Sort Based on Emp No of emp<br>
+	Sort Based on Emp No of emp DESC<br>
  
-
-
-
-
-
 

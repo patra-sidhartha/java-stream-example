@@ -1,4 +1,4 @@
-package com.st.stream.emp;
+package com.st;
 
 public class Employee {
     private int empNo;

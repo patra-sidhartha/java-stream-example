@@ -1,4 +1,6 @@
-package com.st.stream.emp;
+package com.st.toMap;
+
+import com.st.Employee;
 
 import java.util.*;
 import java.util.function.Function;
@@ -43,7 +45,7 @@ public class ToMapFromList {
                         (e1, e2) -> e1.getSal() > e2.getSal() ? e1 : e2
                 )
         );
-//        System.out.println(deptWiseHihestSal);
+        System.out.println(deptWiseHihestSal);
 
 //        3. Specific Map Implementation (Supplier)
 //        By default, toMap returns a HashMap. You can specify a different type like TreeMap or LinkedHashMap using a Map Supplier.
@@ -86,7 +88,7 @@ public class ToMapFromList {
                         LinkedHashMap::new
 
                 ));
-        System.out.println(sortBasedOnValue);
+//        System.out.println(sortBasedOnValue);
 
         // Sort Based on Emp No of emp DESC
         LinkedHashMap<Integer, Employee> sortBasedOnValueDesc = mapEmpNoToEmpObj.entrySet().stream()
@@ -98,7 +100,25 @@ public class ToMapFromList {
                         LinkedHashMap::new
 
                 ));
-        System.out.println(sortBasedOnValueDesc);
+//        System.out.println(sortBasedOnValueDesc);
 
+        String s = "swiss";
+        LinkedHashMap<Character, Long> collect = s.chars().mapToObj(c -> (char) c).collect(Collectors.groupingBy(
+                Function.identity(),
+                LinkedHashMap::new,
+                Collectors.counting()
+        ));
+        System.out.println(collect);
+
+//                .entrySet().stream()
+//                .filter(entry -> entry.getValue() == 1)
+//                .map(Map.Entry::getKey)
+//                .findFirst();
+//        System.out.println(ch.get());
+
+        Stream.iterate(new int[] {0,1}, t -> new int[] {t[1], t[0] + t[1]})
+                .limit(5)
+                .map(t -> t[0]).forEach(System.out::println);
     }
 }
+

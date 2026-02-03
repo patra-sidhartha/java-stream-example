@@ -1,7 +1,8 @@
-package com.st.stream.emp;
+package com.st.groupBy;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import com.st.Employee;
 
 public class GroupByLogic {
     public static void main(String[] args) {
@@ -42,7 +43,7 @@ public class GroupByLogic {
                 Employee::getDeptno,
                 Collectors.averagingDouble(Employee::getSal)
         ));
-//        System.out.println(avgSalPerDept);
+        System.out.println(avgSalPerDept);
 
 //        Total Salary (Sum) per Department:
         Map<Integer, Double> deptWiseTotalSal = empList.stream().collect(Collectors.groupingBy(
@@ -123,7 +124,7 @@ public class GroupByLogic {
                 e -> e.getSal() > 2000,
                 Collectors.collectingAndThen(
                         Collectors.toList(),
-                        list -> list.stream().sorted(Collections.reverseOrder()).collect(Collectors.toList())
+                        list -> list.stream().sorted(Comparator.comparing(Employee::getSal).reversed()).collect(Collectors.toList())
                 )
         ));
         System.out.println(partitionAndSort);
@@ -131,3 +132,4 @@ public class GroupByLogic {
     }
 
 }
+
